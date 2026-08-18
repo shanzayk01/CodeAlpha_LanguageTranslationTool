@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Automatic language translator built with HTML, CSS and JavaScript." />
+  <title>Language Translator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-layout">
+    <aside class="intro-panel">
+      <div class="intro-content">
+        <div class="brand-mark">A→文</div>
+        <p class="kicker">Quick Translate</p>
+        <h1>Say it in another language.</h1>
+        <p class="intro-copy">
+          Type your message and watch the translation update automatically.
+        </p>
+      </div>
+
+      <div class="language-settings">
+        <label>
+          <span>From</span>
+          <select id="sourceLanguage" aria-label="Source language"></select>
+        </label>
+
+        <button id="swapButton" class="swap-button" type="button" aria-label="Swap languages">
+          Swap <span aria-hidden="true">↕</span>
+        </button>
+
+        <label>
+          <span>To</span>
+          <select id="targetLanguage" aria-label="Target language"></select>
+        </label>
+      </div>
+    </aside>
+
+    <section class="workspace" aria-label="Translation workspace">
+      <div class="workspace-header">
+        <div>
+          <span class="section-label">Live translation</span>
+          <h2>Start typing below</h2>
+        </div>
+
+        <button id="clearButton" class="clear-button" type="button">Clear all</button>
+      </div>
+
+      <div class="translation-sheet">
+        <section class="input-section">
+          <div class="section-topline">
+            <span id="sourceLabel">English</span>
+            <span id="charCount">0 / 500</span>
+          </div>
+
+          <textarea
+            id="sourceText"
+            maxlength="500"
+            placeholder="Write something..."
+            aria-label="Text to translate"
+            autofocus
+          ></textarea>
+        </section>
+
+        <div class="divider">
+          <span id="activityIndicator">Waiting for text</span>
+        </div>
+
+        <section class="output-section">
+          <div class="section-topline">
+            <span id="targetLabel">Urdu</span>
+
+            <div class="actions">
+              <button id="speakButton" type="button" disabled>Listen</button>
+              <button id="copyButton" type="button" disabled>Copy</button>
+            </div>
+          </div>
+
+          <div
+            id="translatedText"
+            class="translated-text is-placeholder"
+            role="status"
+            aria-live="polite"
+          >
+            Translation appears here.
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

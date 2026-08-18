@@ -1,0 +1,383 @@
+:root {
+  --ink: #16181d;
+  --muted: #717784;
+  --line: #e5e7eb;
+  --panel: #1f285f;
+  --panel-soft: #303b7a;
+  --paper: #ffffff;
+  --page: #eef0f4;
+  --accent: #ffcf5c;
+  --danger: #b42318;
+  --success: #16835b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--page);
+}
+
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+select {
+  cursor: pointer;
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(310px, 34vw) 1fr;
+}
+
+.intro-panel {
+  position: sticky;
+  top: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(34px, 5vw, 70px);
+  color: #fff;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.12), transparent 230px),
+    linear-gradient(160deg, var(--panel-soft), var(--panel));
+}
+
+.brand-mark {
+  width: fit-content;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.kicker {
+  margin: 44px 0 12px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.intro-panel h1 {
+  max-width: 520px;
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  line-height: 0.96;
+  letter-spacing: -0.065em;
+}
+
+.intro-copy {
+  max-width: 480px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.language-settings {
+  display: grid;
+  gap: 12px;
+  margin-top: 56px;
+}
+
+.language-settings label {
+  display: grid;
+  gap: 7px;
+}
+
+.language-settings label span {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.language-settings select {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 42px 0 14px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 0;
+  outline: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.language-settings select option {
+  color: var(--ink);
+  background: #fff;
+}
+
+.language-settings select:focus {
+  border-color: var(--accent);
+}
+
+.swap-button {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  color: var(--panel);
+  background: var(--accent);
+  font-weight: 800;
+}
+
+.swap-button span {
+  margin-left: 7px;
+}
+
+.workspace {
+  min-width: 0;
+  padding: clamp(28px, 5vw, 72px);
+}
+
+.workspace-header {
+  max-width: 980px;
+  margin: 0 auto 26px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.section-label {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.workspace-header h2 {
+  margin: 7px 0 0;
+  font-size: clamp(1.8rem, 4vw, 3.1rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.clear-button {
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  color: var(--muted);
+  background: transparent;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.clear-button:hover {
+  color: var(--ink);
+}
+
+.translation-sheet {
+  max-width: 980px;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0 20px 60px rgba(30, 34, 46, 0.07);
+}
+
+.input-section,
+.output-section {
+  min-height: 330px;
+  padding: clamp(22px, 4vw, 42px);
+}
+
+.section-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+textarea {
+  width: 100%;
+  min-height: 240px;
+  margin-top: 22px;
+  padding: 0;
+  resize: none;
+  border: 0;
+  outline: none;
+  color: var(--ink);
+  background: transparent;
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  line-height: 1.55;
+}
+
+textarea::placeholder {
+  color: #b5bac4;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+}
+
+.divider span {
+  padding: 0 8px;
+  white-space: nowrap;
+}
+
+.divider .loading {
+  color: var(--panel);
+}
+
+.divider .success {
+  color: var(--success);
+}
+
+.divider .error {
+  color: var(--danger);
+}
+
+.output-section {
+  background: #fafafa;
+}
+
+.translated-text {
+  min-height: 240px;
+  margin-top: 22px;
+  color: var(--ink);
+  font-size: clamp(1.3rem, 2.4vw, 2rem);
+  line-height: 1.55;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.translated-text.is-placeholder {
+  color: #b5bac4;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  color: var(--panel);
+  background: transparent;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.actions button:disabled {
+  color: #bcc1ca;
+  cursor: not-allowed;
+}
+
+@media (max-width: 880px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-panel {
+    position: static;
+    min-height: auto;
+    padding: 32px 22px;
+  }
+
+  .intro-panel h1 {
+    max-width: 650px;
+    font-size: clamp(2.6rem, 11vw, 5rem);
+  }
+
+  .intro-copy {
+    margin-top: 16px;
+  }
+
+  .language-settings {
+    grid-template-columns: 1fr auto 1fr;
+    align-items: end;
+    margin-top: 34px;
+  }
+
+  .swap-button {
+    width: 58px;
+    padding: 0 10px;
+  }
+
+  .swap-button span {
+    display: none;
+  }
+
+  .workspace {
+    padding: 34px 18px 50px;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-mark {
+    font-size: 0.74rem;
+  }
+
+  .kicker {
+    margin-top: 30px;
+  }
+
+  .language-settings {
+    grid-template-columns: 1fr;
+  }
+
+  .swap-button {
+    width: 100%;
+  }
+
+  .swap-button span {
+    display: inline;
+  }
+
+  .workspace-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .input-section,
+  .output-section {
+    min-height: 280px;
+    padding: 22px;
+  }
+
+  textarea,
+  .translated-text {
+    min-height: 195px;
+    font-size: 1.25rem;
+  }
+}
