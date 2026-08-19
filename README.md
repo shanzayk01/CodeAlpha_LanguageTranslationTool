@@ -1,36 +1,62 @@
-# Language Translator — Split Layout
+# Language Translator Tool
 
-A static HTML/CSS/JavaScript language translator with automatic translation while typing.
+A clean and responsive web-based language translator with a modern split-screen interface and automatic translation while typing.
 
-## Highlights
+## ✨ Features
 
-- Completely different split-screen UI
-- Auto translation after the user pauses typing
-- No Translate button
-- Source and target language selection
-- Swap languages
-- Copy translated text
-- Text-to-speech
-- Mobile responsive
-- No framework
-- No build command
-- No API key required for basic use
+* Modern split-screen layout
+* Live translation while typing
+* No Translate button required
+* Source and target language selection
+* Swap languages with one click
+* Copy translated text
+* Text-to-speech with **Listen**
+* Character counter
+* Clear all option
+* Responsive design
+* No framework or build process required
 
-## Files
+## 🎨 Design
+
+The interface uses a two-section layout:
+
+* **Left Panel:** App branding, source language, target language, and swap option
+* **Right Panel:** Text input area and translated output
+* Clean, modern, and minimal interface
+* Translation updates automatically while typing
+
+## 🛠️ Technologies Used
+
+* HTML5
+* CSS3
+* JavaScript
+* Translation API
+* Browser Speech Synthesis API
+
+## 📁 Project Structure
 
 ```text
-index.html
-styles.css
-script.js
-README.md
+LanguageTranslationTool/
+│
+├── index.html
+├── styles.css
+├── script.js
+└── README.md
 ```
 
-## Deploy to Vercel
+## 🚀 Live Demo
 
-1. Create a GitHub repository.
-2. Upload all four files to the repository root.
-3. Import the repository into Vercel.
-4. Choose **Other** as the framework preset.
-5. Deploy.
+Try the deployed application here:
 
-No environment variables or build step are needed.
+👉 **[Language Translator — Live Demo](https://code-alpha-language-translation-too-silk.vercel.app/)**
+
+
+## 📌 Project Purpose
+
+This project was created as part of the **CodeAlpha Internship** to demonstrate practical skills in web development, responsive UI design, JavaScript functionality, language translation, and browser-based text-to-speech.
+
+## 👩‍💻 Author
+
+**Shanzay Kamran**
+
+Artificial Intelligence Student
