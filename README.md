@@ -44,7 +44,7 @@ LanguageTranslationTool/
 └── README.md
 ```
 
-## 🚀 Live Demo Vercel
+## 🚀 Live Demo
 
 Try the deployed application here:
 
